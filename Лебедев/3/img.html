@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/all.css" rel="stylesheet">
+    <title>Labaratory work №3</title>
+</head>
+<body id="body">
+    <div class="menu">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+    </div>
+    <div class="container">
+        <h1>Лабораторная работа №3</h1>
+        <h2>Изображения:</h2>
+        <div class="img__wrap">
+            <img src="images/1.jpg" alt="Первая картинка">
+            <img src="images/2.jpg" alt="Вторая картинка">
+        </div>
+        <div id="elem">
+            
+        </div>
+    </div>
+
+    <script>
+        var elem = document.getElementById('elem');
+        var check = document.querySelectorAll('img');
+        for (var i=0;i<check.length;i++){
+            check[i].addEventListener('mouseover', function(event) {
+                elem.innerHTML = this.alt;
+            });
+            check[i].addEventListener('mouseleave', function(event) {
+                elem.innerHTML = '';
+            });
+        }
+    </script>
+</body>
+</html>

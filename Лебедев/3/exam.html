@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/all.css" rel="stylesheet">
+    <title>Labaratory work №3</title>
+</head>
+<body>
+    <div class="menu">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+    </div>
+    <div class="container">
+        <h1>Лабораторная работа №3</h1>
+        <h2>Экзамен 7.05.2018. Осталось дней:</h2>
+        <p id='elem'></p>
+    </div>
+
+    <script>
+        var date = new Date();
+        var exam = new Date('May 7 2018');
+        var elem = document.getElementById('elem');
+        
+        var time = exam - date;
+        time /= 1000;
+        time /= 60;
+        time /= 60;
+        time /= 24;
+
+        elem.innerHTML = Math.round(time);
+    </script>
+</body>
+</html>

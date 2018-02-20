@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/all.css" rel="stylesheet">
+    <title>Labaratory work №3</title>
+</head>
+<body id="body">
+    <div class="menu">
+        <h3>Навигация</h3>
+        <a href="index.html">Главная</a>
+    </div>
+    <div class="container">
+        <h1>Лабораторная работа №3</h1>
+        <h2>Подсчет чисел</h2>
+        <label>
+            <span>Первое число</span>
+            <input type="text" id='first'>    
+        </label>
+        <label>
+            <span>Второе число</span>
+            <input type="text" id='second'>    
+        </label>
+        <button id="sum">Сумма</button>
+        <h3>Значение: <span id='result'></span></h3>
+    </div>
+
+    <script>
+        var sum = document.getElementById('sum');
+        var result = document.getElementById('result');
+        sum.addEventListener('click', function() {
+            var a = parseInt(document.getElementById('first').value);
+            var b = parseInt(document.getElementById('second').value);
+    
+            if (!a || !b) {
+                result.innerHTML = "Ошибка!"
+            } else {
+                result.innerHTML = a + b;
+            }
+        });
+    </script>
+</body>
+</html>
