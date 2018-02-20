@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+<style>
+div
+{font-size:1.5em;}
+A:link
+{text-decoration:none;
+color:black;}
+A:visited
+{text-decoration:none;
+color:black;}
+A:hover
+{color:#9900CC;}
+body 
+{background-color:#CCCCFF;
+color:#660066;}
+h4,ul
+{margin-left:65px;}
+#leftcolumn
+{float:left; 
+width:45%;
+font-size:1.2em}
+#rightcolumn
+{margin-left:50%;}
+h3
+{margin-left:53%;}
+table
+{background-color:#eaeaea;
+        border-style: none; 
+        width: 20em;
+margin-left:53%;}
+</style>
+</head>
+	<body>
+<div align="center"><a href="index.html"> Главная &nbsp </a><a href="list of current tasks.html"> Текущие задачи &nbsp</a><a href="study table.html"> Учебное расписание &nbsp</a><a href="training table.html"> Расписание тренировок &nbsp</a><a href="a little bit of positive.html"> Немного позитива &nbsp</a></div>
+<hr/ color="#9966CC" width=90%>
+<h2 align="center">Список тренировок</h2>	
+<hr/ color="#9999CC" width=90%>
+<div id="leftcolumn">
+<h4>Февраль</h4>
+<ul>
+<li>Тренировка на внутренюю строну бедра (Среда, пятница)</li>
+<li>Тренировка на мышцы брюшного пресса (Вторник)</li>
+<li>Кардио (Понедельник, четверг)</li>
+<li>Тренировка Джулиан Майклз (Воскресенье)</li>
+</ul>
+<h4>Март</h4>
+<ul>
+<li>Тренировка на внешнюю сторону бедра(Воскресенье)</li>
+<li>Балетная тренировка (Вторник)</li>
+<li>Стречинг (Четверг,Суббота)</li>
+</ul>
+</div>
+<dive id="rightcolumn">
+<h3>Введите данные о проведенной тренировке</h3>
+<form method="post">
+<table>
+<tr>
+<th>Тренировка</td>
+<td><select size="1" multiple name="training[]">
+<option disabled>Выберите тренировку</option>
+<option>Тренировка на внутренюю строну бедра</option>
+<option>Тренировка на мышцы брюшного пресса</option>
+<option>Кардио</option>
+<option>Тренировка Джулиан Майклз</option></td>
+</tr>
+<tr>
+<th>Выберите дату</td>
+<td><input type="date" date="Date" id="Date"></td>
+</tr>
+<tr>
+<th>Количество подходов</td>
+<td><input type="radio" value="1">1 &nbsp;
+<input type="radio" value="2">2 &nbsp;
+<input type="radio" value="3">3 &nbsp;
+<input type="radio" value="4">4 &nbsp;
+<input type="radio" value="5">5 &nbsp;
+<input type="radio" value="6">6 &nbsp;
+</td>
+</tr>
+<tr>
+<th>Ощущения</td>
+<td><textarea name="myComments" id="myComments" rows="2" cols="20"></textarea></td>
+</tr>
+<tr>
+<th>Настроение</td>
+<td><input type="text" mood="Mood" id="Mood"></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<th>Тренировка выполнена полностью?</td>
+<td><input type="checkbox" value="Да">Да</td>
+<td><input type="checkbox" value="Нет">Нет</td>
+<tr><td>&nbsp;</td></tr>
+<tr>
+	<td><input type="submit" value="Записать"></td>
+	<td><input type="reset" value="Очистить"></td>
+</tr>
+</table>
+</dive>
+	</body>
+</html>
