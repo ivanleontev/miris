@@ -8,15 +8,82 @@
 </head>
 <body>
     <div id="app" style="text-align: center;">
+        <h3 id="date">Сегодня:</h3>
+        <h3 id="exam">До экзамена осталось:</h3>
 
-        <h3 id="date"></h3>
+        <p>Выбрать фон:</p>
+        <p>Серый: <input type="radio" name="background" value="#ccc"></p>
+        <p>Белый: <input type="radio" name="background" value="#fff" checked></p>
+
+        <img src="1.jpg" id="image" style="max-width: 250px;" alt="Image">
+        <p id="popover"></p>
+
+        <form>
+            <input type="text" id="field1">
+            <input type="text" id="field2">
+
+            <button id="button">Сложить</button>
+        </form>
+
+        <p id="result"></p>
     </div>
-
 
     <script>
         let date = new Date()
 
-        document.getElementById('date').innerHTML = date.toUTCString();
+        document.getElementById('date').innerHTML += ' ' + date.toUTCString();
+
+        let examDate = Date.parse('2018-05-15');
+        let timeDiff = Math.abs(date - examDate);
+        let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        
+        document.getElementById('exam').innerHTML += ' ' + diffDays + ' дня';
+
+        document.querySelectorAll('input[type="radio"]').forEach(item => {
+            item.onclick = function () {
+                document.querySelector('body').style.backgroundColor = item.value;
+            }
+        })
+
+        document.getElementById('image').onmouseover = function (item) {
+            document.getElementById('popover').innerHTML = item.target.alt;
+        }
+
+        document.getElementById('image').onmouseleave = function (item) {
+            document.getElementById('popover').innerHTML = '';
+        }
+
+        let result = document.getElementById('result');
+
+        document.getElementById('button').onclick = function (event) {
+            event.preventDefault();
+            const field1 = document.getElementById('field1');
+            const field2 = document.getElementById('field2');
+            let res = calculator(field1, field2);
+            if (!res) {
+                field1.value = '';
+                field2.value = '';
+
+                result.innerHTML = 'Числа некорректны!';
+
+                setTimeout(() => {
+                    result.innerHTML = '';
+                }, 1000);
+
+                return;
+            }
+
+            result.innerHTML = res;
+        }
+
+        function calculator (field1, field2) {
+            let value1 = parseFloat(field1.value);
+            let value2 = parseFloat(field2.value);
+            if (!value1 || !value2) {
+                return false;
+            }
+            return value1 + value2;
+        }
     </script>
 </body>
 </html>
