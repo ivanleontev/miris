@@ -36,10 +36,10 @@
         var sum = document.getElementById('sum');
         var result = document.getElementById('result');
         sum.addEventListener('click', function() {
-            var a = parseInt(document.getElementById('first').value);
-            var b = parseInt(document.getElementById('second').value);
+            var a = Number(document.getElementById('first').value, 10);
+            var b = Number(document.getElementById('second').value, 10);
     
-            if ((a != 0 && !a) || (b != 0 && !b)) {
+            if (isNaN(a) || isNaN(b)) {
                 result.innerHTML = "Ошибка!"
             } else {
                 result.innerHTML = a + b;
