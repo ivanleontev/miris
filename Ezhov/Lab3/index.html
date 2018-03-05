@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kappa</title>
+</head>
+<body>
+    <div id="app" style="text-align: center;">
+        <h3 id="date">Сегодня: </h3>
+        <h3 id="exam">Дней до экзамена: </h3>
+
+        <h3>Выбрать фон:</h3>
+        <p><input type="radio" name="background" value="#ffae00"> Оранжевый</p>
+        <p><input type="radio" name="background" value="#fff" checked> Белый</p>
+
+        <img src="DoUNoDeWae.png" id="image" style="max-width: 250px;" alt="Do u no de wae?">
+        <p id="popup"></p>
+
+        <form>
+            <h1>Калькулятор</h1>
+            <input type="text" id="field1">
+            +
+            <input type="text" id="field2">
+
+            <button id="button">Сумма</button>
+        </form>
+    </div>
+
+    <script>
+        let date = new Date()
+
+        document.getElementById('date').innerHTML += date.toDateString()
+
+        let examDate = Date.parse('2018-05-20')
+        
+        document.getElementById('exam').innerHTML += Math.ceil(Math.abs(date - examDate) / (1000 * 3600 * 24))
+
+        document.querySelectorAll('input[type="radio"]').forEach(item => {
+            item.onclick = function () {
+                document.querySelector('body').style.backgroundColor = item.value
+            }
+        })
+
+        document.getElementById('image').onmouseover = function (item) {
+            document.getElementById('popup').innerHTML = item.target.alt
+        }
+
+        document.getElementById('image').onmouseleave = function (item) {
+            document.getElementById('popup').innerHTML = ''
+        }
+
+        document.getElementById('button').onclick = function (event) {
+            event.preventDefault()
+            (isNaN(Number(document.getElementById('field1').value, 10)) || isNaN(Number(document.getElementById('field2').value, 10))) ?
+                alert('Были введены не числа!') : alert(Number(document.getElementById('field1').value, 10) + Number(document.getElementById('field2').value, 10))
+        }
+
+    </script>
+</body>
+</html>
