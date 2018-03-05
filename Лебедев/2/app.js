@@ -18,7 +18,7 @@ app.get('/jquery', (req, res) => {
 });
 
 app.get('/xml', (req, res) => {
-    fs.readFile('./auto.xml', (err, html) => {
+    fs.readFile('./db.xml', (err, html) => {
         if (err) {
             throw err; 
         }       
