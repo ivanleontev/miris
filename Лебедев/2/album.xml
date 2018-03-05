@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<album>
+	<song>
+		<name>Shoot to Thrill</name>
+		<artist>AC/DC</artist>
+		<during>5:17</during>
+	</song>
+	<song>
+		<name>Guns for Hire</name>
+		<artist>AC/DC</artist>
+		<during>3:24</during>
+	</song>
+	<song>
+		<name>Thunderstruck</name>
+		<artist>AC/DC</artist>
+		<during>4:52</during>
+	</song>
+	<song>
+		<name>Highway to Hell</name>
+		<artist>AC/DC</artist>
+		<during>3:28</during>
+	</song>
+	<song>
+		<name>Ait't Gonna Die Tonight</name>
+		<artist>Macklemore</artist>
+		<during>3:34</during>
+	</song>
+</album>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<documents>
+  <document>
+    <name>schedule</name>
+    <format>xlsx</format>
+    <size>100</size>
+  </document>
+  <document>
+    <name>formula</name>
+    <format>docx</format>
+    <size>300</size>
+  </document>
+  <document>
+    <name>exam</name>
+    <format>docx</format>
+    <size>1500</size>
+  </document>
+  <document>
+    <name>course work</name>
+    <format>docx</format>
+    <size>1200</size>
+  </document>
+</documents>
