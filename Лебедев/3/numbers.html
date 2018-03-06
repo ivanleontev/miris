@@ -36,13 +36,19 @@
         var sum = document.getElementById('sum');
         var result = document.getElementById('result');
         sum.addEventListener('click', function() {
-            var a = Number(document.getElementById('first').value, 10);
-            var b = Number(document.getElementById('second').value, 10);
-    
-            if (isNaN(a) || isNaN(b) || a == '' || b == '') {
-                result.innerHTML = "Ошибка!"
+            var a = document.getElementById('first').value;
+            var b = document.getElementById('second').value
+            if (a !== '' || b !== '') {
+                var a = Number(a, 10);
+                var b = Number(b, 10);
+        
+                if (isNaN(a) || isNaN(b)) {
+                    result.innerHTML = "Ошибка!"
+                } else {
+                    result.innerHTML = a + b;
+                }
             } else {
-                result.innerHTML = a + b;
+                result.innerHTML = "Ошибка!"
             }
         });
     </script>
