@@ -39,7 +39,7 @@
             var a = Number(document.getElementById('first').value, 10);
             var b = Number(document.getElementById('second').value, 10);
     
-            if (isNaN(a) || isNaN(b)) {
+            if (isNaN(a) || isNaN(b) || a == '' || b == '') {
                 result.innerHTML = "Ошибка!"
             } else {
                 result.innerHTML = a + b;
