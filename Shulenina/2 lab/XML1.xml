@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<employees>
+	<employee name="Kalin V.B.">
+		<experience>15</experience>
+		<salary>350000 rub</salary>
+	</employee>
+	<employee name="Lewakina D.L.">
+		<experience></experience>
+		<salary>100000 rub</salary>	
+	</employee>
+	<employee name="Miric C.C.">
+		<experience>4</experience>
+		<salary>240000</salary>
+	</employee>
+</employees>
