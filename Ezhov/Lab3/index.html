@@ -20,9 +20,9 @@
 
         <form>
             <h1>Калькулятор</h1>
-            <input type="text" id="field1">
+            <input type="number" id="field1">
             +
-            <input type="text" id="field2">
+            <input type="number" id="field2">
 
             <button id="button">Сумма</button>
         </form>
@@ -53,8 +53,7 @@
 
         document.getElementById('button').onclick = function (event) {
             event.preventDefault()
-            (isNaN(Number(document.getElementById('field1').value, 10)) || isNaN(Number(document.getElementById('field2').value, 10))) ?
-                alert('Были введены не числа!') : alert(Number(document.getElementById('field1').value, 10) + Number(document.getElementById('field2').value, 10))
+            alert(Number(document.getElementById('field1').value, 10) + Number(document.getElementById('field2').value, 10))
         }
 
     </script>
