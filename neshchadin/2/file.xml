@@ -1,0 +1,31 @@
+<?xml version="1.0"?>  
+<PurchaseOrder PurchaseOrderNumber="99503" OrderDate="1999-10-20">  
+  <Address Type="Shipping">  
+    <Name>Александр Лебедев</Name>  
+    <Street>ул. Пушкина</Street>  
+    <City>Пушкино</City>  
+    <Region>Московская область</Region>  
+    <Zip>123123</Zip>  
+    <Country>Россия</Country>  
+  </Address>  
+  <Address Type="Billing">  
+    <Name>Денис Ежов</Name>  
+    <Street>ул. Рыжих</Street>  
+    <City>Рассказово</City>  
+    <Region>Московская область</Region>  
+    <Zip>125505</Zip>  
+    <Country>Россия</Country>  
+  </Address>  
+  <Items>  
+    <Item PartNumber="872-AA">  
+      <ProductName>Газонокосилка</ProductName>  
+      <Quantity>1</Quantity>  
+      <Price>14895</Price>  
+    </Item>  
+    <Item PartNumber="926-AA">  
+      <ProductName>Бензопила</ProductName>  
+      <Quantity>2</Quantity>  
+      <Price>10999</Price>  
+    </Item>  
+  </Items>  
+</PurchaseOrder>
