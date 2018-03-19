@@ -1,0 +1,6 @@
+------WebKitFormBoundaryJLxAgv5wzQAKDxZc
+Content-Disposition: form-data; name="img"; filename="test.txt"
+Content-Type: text/plain
+
+test, kappa!
+------WebKitFormBoundaryJLxAgv5wzQAKDxZc--

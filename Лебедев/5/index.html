@@ -12,12 +12,10 @@
     <p><button class="btn-ip">Узнать ip</button></p>
     <p style="margin-bottom: 100px;" class="js-calc-domain"></p>
 
-    <form action="/" enctype="multipart/form-data" method="post">
-        <p><input placeholder="Кому отправить" type="text" name="emailto"></p>
-        <p><textarea name="text" placeholder="Текст"></textarea></p>
-        <p><input type="file" name="f">
-        <input type="submit" value="Отправить"></p>
-       </form> 
+        <p><input placeholder="Кому отправить" type="text" name="emailto" class="mailto"></p>
+        <p><textarea class="mailtext" name="text" placeholder="Текст"></textarea></p>
+        <p><input type="file" name="f" class="file">
+        <p><input type="submit" value="Отправить" class="file-btn"></p>
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -27,6 +25,26 @@
         $('.btn-ip').click(function() {
             $.get('/domain?host=' + host.val(), function(data) {
                 $('.js-calc-domain').text('Ip: ' + data.address + " ; Хост и ip текущего запроса: " + data.host + " " + data.ip);
+            });
+        });
+
+        $('.file-btn').click(function() {
+            var $input = $(".file");
+            var inputTo = $('.mailto').val();
+            var inputText = $('.mailtext').val();
+            var fd = new FormData;
+
+            fd.append('img', $input.prop('files')[0]);
+
+            $.ajax({
+                url: '/file?fname=' + $input.val() + '&to=' + inputTo + '&text=' + inputText,
+                data: fd,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                success: function (data) {
+                    alert(data);
+                }
             });
         });
     </script>
