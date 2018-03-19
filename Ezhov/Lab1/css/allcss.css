@@ -1,0 +1,72 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../img/bg.jpg);
+}
+
+.main-list {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+    
+}
+
+.main-img {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+}
+
+.main-list-block > li > a {
+    font-family: 'Jura', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+}
+
+.formatted-text {
+    font-family: 'Jura', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    color: white;
+    background: rgba(0,0,0,0.5);;
+}
+
+.list-item {
+    font-family: 'Jura', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.table {
+    color: black;
+}
+
+.inputs {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+    display: inline-block;
+    color: black
+}

@@ -1,0 +1,135 @@
+body {
+    background-color: #e8e8e8; 
+ }
+ 
+ .container {
+     max-width: 700px;
+     margin: 75px auto;
+ }
+ 
+ ol, ul {
+     text-align: left;
+ }
+ 
+ li {
+     padding-left: 15px;
+     margin-bottom: 10px;
+ }
+ 
+ .text-center {
+     text-align: center;
+ }
+ 
+ .menu {
+     width: 200px;
+     background-color: #323A45;
+     border-radius: 10px; 
+     color: #FFF;
+     position: fixed;
+     left: 30px;
+     top: 75px;
+     text-align: center;
+     padding-bottom: 20px;
+ }
+ 
+ .menu a {
+     display: block;
+     font-weight: 700;
+     color: #fff;
+     padding: 10px;
+     text-decoration: none;
+ }
+ .menu a:hover {
+     background: #3CB7E7;
+ }
+ 
+ table {
+     width: 100%;
+     font-size: 14px;
+     border-radius: 10px;
+     border-spacing: 0;
+     text-align: center;
+     margin-bottom: 60px;
+   }
+ th {
+     background: #BCEBDD;
+     color: white;
+     text-shadow: 0 1px 1px #2D2020;
+     padding: 10px 20px;
+ }
+ th, td {
+     border-style: solid;
+     border-width: 0 1px 1px 0;
+     border-color: white;
+ }
+ th:first-child, td:first-child {
+     text-align: left;
+ }
+ th:first-child {
+     border-top-left-radius: 10px;
+ }
+ th:last-child {
+     border-top-right-radius: 10px;
+         border-right: none;
+ }
+ td {
+ padding: 10px 20px;
+ background: #F8E391;
+ }
+ tr:last-child td:first-child {
+     border-radius: 0 0 0 10px;
+ }
+ tr:last-child td:last-child {
+     border-radius: 0 0 10px 0;
+ }
+ tr td:last-child {
+     border-right: none;
+ }
+ 
+ h1 {
+     border-bottom: 1px solid black;
+     padding-bottom: 10px; 
+ }
+ 
+ .cursive {
+     font-style: italic;
+ }
+ 
+ .img__wrap {
+     padding-right: -2%; 
+ }
+ 
+ img {
+     width: 45%;
+     height: 230px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+ }
+ 
+ 
+ label {
+     color: #525b6a;
+     font-size: 14px;
+     font-weight: 700;
+     line-height: 24px;
+ }
+ 
+ textarea {
+     min-height: 100px;
+ }
+ 
+ .button {
+     background-color: #6bd869;
+     color: #fff;
+     cursor: pointer;
+     font-size: 14px;
+     font-weight: 700;
+     line-height: 17px;
+     text-decoration: none;
+     text-transform: uppercase;
+     text-align: center;
+     border: none;
+     border-radius: 100px;
+     padding: 21px 40px;
+     display: inline-block;
+ }

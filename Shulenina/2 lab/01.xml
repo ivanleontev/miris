@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Employee>
+    <Name>Kalin V.B.</Name>
+    <Experience>15</Experience>
+    <Salary>350000</Salary>
+  </Employee>
+  <Employee>
+    <Name>Lewakina D.L.</Name>
+    <Experience>8</Experience>
+    <Salary>100000</Salary>
+  </Employee>
+  <Employee>
+    <Name>Miric C.C.</Name>
+    <Experience>4</Experience>
+    <Salary>240000</Salary>
+  </Employee>
+</NewDataSet>

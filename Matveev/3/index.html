@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Лабораторная 3</title>
+</head>
+<body>
+<style>
+body {
+    background-color: #FFE4C4;
+}
+</style>
+<script>
+Data = new Date()
+Year = Data.getFullYear();
+Month = Data.getMonth();
+Day = Data.getDate();
+Hour = Data.getHours();
+Minutes = Data.getMinutes();
+Seconds = Data.getSeconds();
+switch (Month)
+{
+  case 0: fMonth="января"; break;
+  case 1: fMonth="февраля"; break;
+  case 2: fMonth="марта"; break;
+  case 3: fMonth="апреля"; break;
+  case 4: fMonth="мае"; break;
+  case 5: fMonth="июня"; break;
+  case 6: fMonth="июля"; break;
+  case 7: fMonth="августа"; break;
+  case 8: fMonth="сентября"; break;
+  case 9: fMonth="октября"; break;
+  case 10: fMonth="ноября"; break;
+  case 11: fMonth="декабря"; break;
+}	
+document.write("<center><br><b>Текущая дата: "+Day+" "+fMonth+" "+Year+" года</b></center>");
+document.write("<center><br><b>Текущее время: "+Hour+":"+Minutes+":"+Seconds+"</b></center>");
+</script>
+<script>
+examDate = Date.parse('2018-05-17');
+timeDiff = Math.abs(Data - examDate);
+diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+document.write("<center><br><b>Время до экзамена: "+diffDays+" дня</b></center>");
+</script>
+
+<hr/>
+<center><h4>Цвет страницы</h4>
+<div>
+<input type="radio" name="color" value="#FFE4C4" checked>Bisque
+<input type="radio" name="color" value="#FFA07A">LightSalmon
+<input type="radio" name="color" value="#D8BFD8">Thistle
+<input type="radio" name="color" value="#ADD8E6">LightBlue
+</div>
+<hr/>
+<img src="img.jpeg" id="image" width=30% height=45% alt="marshmallow">
+<p id="alt"></p>
+<hr/>
+<form>
+<br/><input id="a" type="text">
+<br>+
+<br/><input id="b" type="text">
+<br/><br/><input type="button" value="Сложить числа"
+onclick="func();"><br>
+</form>
+<script>			
+document.querySelectorAll('input[type="radio"]').forEach(item => {
+item.onclick=function(){
+document.querySelector('body').style.backgroundColor=item.value;}})
+document.getElementById('image').onmouseover= function(item){
+document.getElementById('alt').innerHTML=item.target.alt;}
+document.getElementById('image').onmouseleave= function(item){
+document.getElementById('alt').innerHTML='';}
+
+function func() {
+var a = Number(document.getElementById('a').value, 10);
+var b = Number(document.getElementById('b').value, 10);
+if (!isNaN(a) && !isNaN(b)) {
+var c = a + b;
+alert(c);
+} else {
+alert("Введите числа!");
+}
+}	
+</script>
+</body>
+</html>

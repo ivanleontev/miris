@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<title>Лабораторная работа 3</title>
+</head>
+<body>
+<h3 id="date">Сегодняшняя дата:</h3>
+<h3 id="exam">Экзамен через:</h3>
+<hr/>
+<h4>Выберите цвет страницы</h4>
+
+<div>
+<input type="radio" name="color" value="#FFFFFF" checked>Белый
+<input type="radio" name="color" value="#008000">Зеленый
+<input type="radio" name="color" value="#4B0082">Фиолетовый
+<input type="radio" name="color" value="#7FFFD4">Аквамарин
+</div>
+<hr/>
+<img src="1.jpeg" id="image" width=35% height=40% alt="Это я в 8:30">
+<p id="alt"></p>
+<hr/>
+<form>
+<p><input type="text" id="first"> +
+<input type="text" id="second"></p>
+<button id="button" onclick="funk();">Посчитать</button>
+</form>
+
+
+<script>
+	var date = new Date()
+        document.getElementById('date').innerHTML += ' ' + date.toUTCString();
+ var examDate = Date.parse('2018-05-15');
+        var timeDiff = Math.abs(date - examDate);
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        
+        document.getElementById('exam').innerHTML += ' ' + diffDays + ' дня';
+		
+		document.querySelectorAll('input[type="radio"]').forEach(item => {
+		item.onclick=function(){
+		document.querySelector('body').style.backgroundColor=item.value;}})
+		document.getElementById('image').onmouseover= function(item){
+		document.getElementById('alt').innerHTML=item.target.alt;}
+		document.getElementById('image').onmouseleave= function(item){
+		document.getElementById('alt').innerHTML='';}
+		function funk(){
+		var x=parseFloat(document.getElementById('first').value);
+		var y=parseFloat(document.getElementById('second').value);
+		var res= document.getElementById('res');
+		if (!x || !y){
+		alert('Значения не введены!!!!!!!!!');
+		} else{
+		alert(x+y);
+		}}
+</script>
+</body>
+</html>
