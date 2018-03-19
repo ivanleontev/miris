@@ -1,0 +1,14 @@
+<notebook>
+    <page>
+        <id>1</id>
+        <text>Page one text</text>
+    </page>
+    <page>
+        <id>2</id>
+        <text>Page two text</text>
+    </page>
+    <page>
+        <id>3</id>
+        <text>Page three text</text>
+    </page>
+</notebook>
