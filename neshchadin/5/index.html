@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laba 5</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" defer></script>
+    <script src="App.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <div class="container" style="margin-top: 100px;">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="title">Лабораторная работа №5</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>Определение IP адреса домена</h5>        
+                    </div>
+                    <div v-if="result" class="alert alert-success">
+                        {{ result }}
+                    </div>
+                    <div v-if="error" class="alert alert-danger">
+                        {{ error }}
+                    </div>
+                    <div class="form-group">
+                        <label>Адрес сайта</label>
+                        <input type="text" class="form-control" v-model="host">
+                    </div>
+                    <button class="btn btn-primary" @click.prevent="getHost">Определить IP</button>
+                    
+                    <div class="form-group">
+                        <label>Кому письмо</label>
+                        <input type="text" placeholder="test@mail.ru" v-model="to" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст письма</label>
+                        <textarea name="" v-model="text" cols="10" rows="10" class="form-control"></textarea>
+                    </div>
+                    <input type="file" ref="fileInput">
+                    <button class="btn btn-primary" @click.prevent="sendMail">Отправить письмо</button>
+                </div>
+            </div>
+        </div>
+        <!-- <p><input placeholder="Кому отправить" type="text" name="emailto" class="mailto"></p>
+        <p><textarea class="mailtext" name="text" placeholder="Текст"></textarea></p>
+        <p><input type="file" name="f" class="file">
+        <p><input type="submit" value="Отправить" class="file-btn"></p> -->
+    </div>
+</body>
+</html>

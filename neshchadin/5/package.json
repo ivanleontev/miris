@@ -1,0 +1,18 @@
+{
+  "name": "5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dns": "^0.2.2",
+    "express": "^4.16.3",
+    "express-formidable": "^1.0.0",
+    "nodemailer": "^4.6.3"
+  }
+}
