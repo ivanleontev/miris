@@ -1,0 +1,74 @@
+/lab1
+<!DOCTYPE html>
+<html>
+<head>
+<title>Лабораторная работа №3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+<center>
+<h1>Дата:</h1>
+<h2 id="dat"></h2>
+
+<script>
+var d=new Date();
+document.getElementById("dat").innerHTML=d.toDateString();
+</script>
+
+<h1>Количество дней до экзамена:</h1>
+<h2 id="ekz">
+</center>
+<script>
+var one=new Date("May 15 2018 10:20:00"); // дата экзамена, до которой считаем.
+var two=Date.now(); // текущее время
+var ekz = one - two; // миллисекунды до даты
+ekz /= 1000; // секунды до даты
+ekz /= 60; // минуты до даты
+ekz /= 60; // часы до даты
+ekz /= 24; // дни до даты
+document.getElementById("ekz").innerHTML=Math.round(ekz);
+</script>
+
+<h2>Цвет фона</h2>
+
+<script>
+
+function ustanovit_fon(el, cl) {
+el.style.backgroundColor = cl; }
+</script>
+
+<form>
+<input name="fon" type="radio" value="Сменить цвет фона страницы" onClick="document.bgColor='#E2B6E1'"><font size=3>лавандовый</font><br>
+<input name="fon" type="radio" value="Сменить цвет фона страницы" onClick="document.bgColor='#3EB489'"><font size=3>мятный</font><br>
+<input name="fon" type="radio" value="Сменить цвет фона страницы" onClick="document.bgColor='#F6B7D7'"><font size=3>бледно-розовый</font><br>
+</form>
+<center>
+<script>
+
+function func() {
+var a = Number(document.getElementById('a').value, 10);
+var b = Number(document.getElementById('b').value, 10);
+if (!isNaN(a) && !isNaN(b)) {
+var c = a / b;
+alert(c);
+} else {
+alert("введите числа: ");
+}
+}
+</script>
+
+<input id="a" type="text" size="10"> ÷ <input id="b" type="text" size="10"><br>
+<input type="button" value="разделить числа"
+onclick="func();"><br>
+</center>
+<center>
+<img src="kumamon.png" title="Кумамон"
+
+onmouseover="document.getElementById('result').innerHTML ='Кумамон';"
+onmouseout="document.getElementById('result').innerHTML ='';"><br/>
+</center>
+</body>
+</html>
